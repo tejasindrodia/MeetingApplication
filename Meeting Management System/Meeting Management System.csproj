@@ -40,7 +40,9 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Angular-WebApi\webapi\Models\Login2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +81,44 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MeetingManagementSystem_dbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Angular-WebApi\webapi\App_Start\BundleConfig.cs" />
+    <Compile Include="Angular-WebApi\webapi\App_Start\FilterConfig.cs" />
+    <Compile Include="Angular-WebApi\webapi\App_Start\RouteConfig.cs" />
+    <Compile Include="Angular-WebApi\webapi\App_Start\WebApiConfig.cs" />
+    <Compile Include="Angular-WebApi\webapi\Controllers\DepartmentController.cs" />
+    <Compile Include="Angular-WebApi\webapi\Controllers\EmployeeController.cs" />
+    <Compile Include="Angular-WebApi\webapi\Controllers\HomeController.cs" />
+    <Compile Include="Angular-WebApi\webapi\Controllers\LoginController.cs" />
+    <Compile Include="Angular-WebApi\webapi\Controllers\ValuesController.cs" />
+    <Compile Include="Angular-WebApi\webapi\Models\Department.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Angular-WebApi\webapi\Models\Employee.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Angular-WebApi\webapi\Models\Employeemaster.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Angular-WebApi\webapi\Models\Login.Context.cs" />
+    <Compile Include="Angular-WebApi\webapi\Models\Login.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Angular-WebApi\webapi\Models\Login.cs" />
+    <Compile Include="Angular-WebApi\webapi\Models\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Angular-WebApi\webapi\Models\Login1.cs" />
+    <Compile Include="Angular-WebApi\webapi\Models\Login1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Angular-WebApi\webapi\Models\Response.cs" />
+    <Compile Include="Angular-WebApi\webapi\Models\Usp_Login_Result.cs">
+      <DependentUpon>Login.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +159,21 @@
     <None Include="MeetingManagementSystem_dbDataSet1.xss">
       <DependentUpon>MeetingManagementSystem_dbDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="Angular-WebApi\angular9\src\.vscode\tasks.json" />
+    <None Include="Angular-WebApi\angular9\src\app\package-lock.json" />
+    <None Include="Angular-WebApi\angular9\src\app\package1.json" />
+    <None Include="Angular-WebApi\angular9\src\assets\.gitkeep" />
+    <None Include="Angular-WebApi\angular9\src\package.json" />
+    <None Include="Angular-WebApi\webapi\.vs\slnx.sqlite" />
+    <None Include="Angular-WebApi\webapi\.vs\VSWorkspaceState.json" />
+    <None Include="Angular-WebApi\webapi\.vs\webapi\v16\.suo" />
+    <EntityDeploy Include="Angular-WebApi\webapi\Models\Login.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Login1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Angular-WebApi\webapi\Models\Login.edmx.diagram">
+      <DependentUpon>Login.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,6 +191,73 @@
     <Content Include="MeetingManagementSystem_db.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Angular-WebApi\angular9\src\app\app.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\app.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\dashboard\dashboard.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\dashboard\dashboard.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\department\add-dep\add-dep.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\department\add-dep\add-dep.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\department\department.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\department\department.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\department\edit-dep\edit-dep.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\department\edit-dep\edit-dep.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\department\show-dep\show-dep.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\department\show-dep\show-dep.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\employee\add-emp\add-emp.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\employee\add-emp\add-emp.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\employee\edit-emp\edit-emp.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\employee\edit-emp\edit-emp.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\employee\employee.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\employee\employee.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\employee\show-emp\show-emp.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\employee\show-emp\show-emp.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\login\login.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\login\login.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\app\register\register.component.css" />
+    <Content Include="Angular-WebApi\angular9\src\app\register\register.component.html" />
+    <Content Include="Angular-WebApi\angular9\src\favicon.ico" />
+    <Content Include="Angular-WebApi\angular9\src\index.html" />
+    <Content Include="Angular-WebApi\angular9\src\styles.css" />
+    <Content Include="Angular-WebApi\webapi\Models\Login.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Login.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Angular-WebApi\webapi\Models\Login.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Login2.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\app.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\app.module.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\department\add-dep\add-dep.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\department\delete-dep\delete-dep.component.ts.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\department\department.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\department\edit-dep\edit-dep.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\department\show-dep\show-dep.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\employee\add-emp\add-emp.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\employee\delete-emp\delete-emp.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\employee\edit-emp\edit-emp.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\employee\employee.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\employee\show-emp\show-emp.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\models\department-model.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\models\employee-model.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\models\register.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\register\register.component.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\services\department.service.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\services\employee.service.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\app\services\login.service.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\environments\environment.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\main.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\polyfills.ts" />
+    <TypeScriptCompile Include="Angular-WebApi\angular9\src\test.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
